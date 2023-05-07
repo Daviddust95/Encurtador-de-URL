@@ -1,13 +1,23 @@
-import pyshorteners
+import requests
+import json
 
-# URL a ser encurtada
-url = "https://www.google.com"
+access_token = "8e9d5422f15f9bcdd539d2e5db74f5cbec9780c0"
+url = "https://api-ssl.bitly.com/v4/shorten"
 
-# Cria um objeto Shortener
-s = pyshorteners.Shortener()
+headers = {
+    "Authorization": f"Bearer {access_token}",
+    "Content-Type": "application/json"
+}
 
-# Encurta a URL usando o serviço padrão (ou seja, bit.ly)
-short_url = s.bitly.short(url)
+data = {
+    "long_url": "https://www.google.com/"
+}
 
-# Imprime a URL encurtada
-print("URL encurtada:", short_url)
+response = requests.post(url, headers=headers, data=json.dumps(data))
+
+if response.status_code == 200:
+    response_data = json.loads(response.text)
+    short_url = response_data["link"]
+    print(short_url)
+else:
+    print("Erro ao encurtar URL")
