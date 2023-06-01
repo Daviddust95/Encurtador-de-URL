@@ -4,4 +4,5 @@ Este é um script em Python que utiliza a biblioteca pyshorteners para encurtar 
 Para instalar a biblioteca pyshorteners e tkinter , basta executar os seguintes comandos no terminal:
 
 pip install pyshorteners
+
 pip install tkinter
