@@ -1,6 +1,7 @@
 	# Encurtador-de-URL
-Este é um script em Python que utiliza a biblioteca requests para encurtar URLs usando a API do Bitly, através de requisições HTTP. A versão anterior utilizava a biblioteca pyshorteners, mas devido a alguns problemas, optei pela abordagem com requests.
+Este é um script em Python que utiliza a biblioteca pyshorteners para encurtar URLs, através de requisições HTTP. A versão anterior utilizava a biblioteca requests, mas devido a alguns problemas, optei pela abordagem com pyshorteners com auxílio da biblioteca tkinter para interface gráfica.
 
-Para instalar a biblioteca Requests, basta executar o seguinte comando no terminal:
+Para instalar a biblioteca pyshorteners e tkinter , basta executar os seguintes comandos no terminal:
 
-Pip install requests.
+pip install pyshorteners
+pip install tkinter
